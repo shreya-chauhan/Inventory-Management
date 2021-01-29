@@ -1,1 +1,3 @@
-# Inventory-Management
+# Combined
+
+Final Project

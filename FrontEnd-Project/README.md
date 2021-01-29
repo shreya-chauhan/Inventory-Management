@@ -1,3 +1,3 @@
-# vueauthclient
+# frontend
 
 frontend project
