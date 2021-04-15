@@ -1,44 +1,71 @@
 <template>
-    <div class="hello">
-        <h1>{{ msg }}</h1>
-        <a style="cursor: pointer; text-decoration: underline" v-on:click="navigate()">Navigate to Page1</a>
+  <div>
+    <div class="header">
+        <b>Enter The Product Details</b>
     </div>
+    <section class="form">
+        <div>
+        <label> Name :</label><br>
+            <input type="text" class="text-input"><br><br>
+        <label> Category :</label><br>
+            <input type="text" class="text-input"><br><br>
+        <label> Quantity :</label><br>
+            <input type="number" class="text-input"><br><br>
+        <label> Cost Per Unit :</label><br>
+            <input type="text" class="text-input"><br><br>
+        <label> Image of the product :</label><br>
+            <input type="file" class="other-input"><br><br>
+        <label> Name :</label><br>
+            <input type="text" class="text-input"><br><br>
+        </div>
+        <div>
+        <button type="Submit">Add Product</button>
+        </div>
+    </section>
+  </div>
 </template>
 
 <script>
-     import router from '../router'
 
-    export default {
-        name: 'AddNewProduct',
-        data () {
-            return {
-                msg: 'Hey Nic Raboy'
-            }
-        },
-        methods: {
-            navigate() {
-                router.go(-1);
-            }
-        }
-    }
+export default {
+    name: 'AddNewProduct',
+}
+
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    h1, h2 {
-        font-weight: normal;
-    }
+.header{
+    text-align: left;
+    margin-top: 30px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 30px;
+}
 
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
+.form {
+    margin-top: 20px;
+    text-align: left;
+}
 
-    li {
-        display: inline-block;
-        margin: 0 10px;
-    }
+label {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
 
-    a {
-        color: #42b983;
-    }
+.text-input{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #cdced1; 
+}
+
+.other-input{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 30px;
+    border: 0px;
+}
+
 </style>

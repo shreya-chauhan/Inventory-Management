@@ -1,44 +1,57 @@
 <template>
-    <div class="hello">
-        <h1>{{ msg }}</h1>
-        <a style="cursor: pointer; text-decoration: underline" v-on:click="navigate()">Navigate to Page1</a>
+  <div>
+    <div class="header">
+        <b>Enter The Product Details</b>
     </div>
+    <section class="form">
+        <div>
+        <label> Category :</label><br>
+            <select name="Select One" class="other-input">
+                <option value="Raw Material">Volvo</option>
+                <option value="Product Creation">Saab</option>
+            </select>
+        </div>
+        <div>
+        <button type="Submit">Submit</button>
+        </div>
+    </section>
+  </div>
 </template>
 
 <script>
-     import router from '../router'
 
-    export default {
-        name: 'AddNewProduct',
-        data () {
-            return {
-                msg: 'Hey Nic Raboy'
-            }
-        },
-        methods: {
-            navigate() {
-                router.go(-1);
-            }
-        }
-    }
+export default {
+    name: 'Inventory',
+}
+
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- https://vuejsexamples.com/a-prettier-way-to-display-select-boxes/ -->
 <style scoped>
-    h1, h2 {
-        font-weight: normal;
-    }
+.header{
+    text-align: left;
+    margin-top: 30px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 30px;
+}
 
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
+.form {
+    margin-top: 20px;
+    text-align: left;
+}
 
-    li {
-        display: inline-block;
-        margin: 0 10px;
-    }
+label {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
 
-    a {
-        color: #42b983;
-    }
+.other-input{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 30px;
+    border: 0px;
+}
+
 </style>

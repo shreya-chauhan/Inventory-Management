@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import HomePage from './components/HomePage.vue'
+import HomePage from './components/HomePage.vue';
 
 export default {
   name: 'App',
@@ -22,10 +22,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 .logo-height {
-  width: 400px;
-  height: 200px;
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  left: 200px;
 }
 </style>
